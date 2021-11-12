@@ -6,7 +6,7 @@ import os
 port = 587  # For starttls
 smtp_server = "smtp.gmail.com" # choose smtp server default is google
 # get sender creds
-sender_email = "emailbottesting100@gmail.com"
+sender_email = "example@example.com" # put your email here
 password = getpass("type your password and press enter:")
 # get reciever email
 receiver_email= input("Enter  receiver email: ")
