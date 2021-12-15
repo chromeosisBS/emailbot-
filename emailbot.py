@@ -11,8 +11,9 @@ def login():
     password = getpass("type your password and press enter:")
 
 # get reciever email
-def reciever():
+def get_reciever():
     receiver_email= input("Enter  receiver email: ")
+
 f=open("message.txt", "r")
 if f.mode == 'r':
 
