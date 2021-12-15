@@ -3,9 +3,10 @@ from getpass import getpass
 import os
 try:
     f = open("message.txt")
-    # Do something with the file
+    #check for file
 except IOError:
     f= open("message.txt","w+")
+    #create file if it does not allready exist
 finally:
     f.close()
 
