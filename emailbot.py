@@ -1,6 +1,13 @@
 import smtplib, ssl
 from getpass import getpass
 import os
+try:
+    f = open("message.txt")
+    # Do something with the file
+except IOError:
+    f= open("message.txt","w+")
+finally:
+    f.close()
 
 
 port = 587  # For starttls
