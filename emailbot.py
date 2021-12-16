@@ -10,9 +10,9 @@ except IOError:
 finally:
     f.close()
 
-
 port = 587  # For starttls
 smtp_server = "smtp.gmail.com" # choose smtp server default is google
+
 # get sender creds
 def login():
     sender_email = "emailbottesting@gmail.com" # put your email here
@@ -24,13 +24,14 @@ def get_reciever():
 
 f = open("message.txt", "r")
 if f.mode == 'r':
-
     message = f.read()
+
 context = ssl.create_default_context()
+
 with smtplib.SMTP(smtp_server, port) as server:
     server.ehlo()  # Can be omitted
-    server.starttls(context=context)
     server.ehlo()  # Can be omitted
+
 def send(): 
     print (message)
     server.login(sender_email, password)
