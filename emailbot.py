@@ -20,9 +20,9 @@ def login():
 
 # get reciever email
 def get_reciever():
-    receiver_email= input("Enter receiver email: ")
+    receiver_email = input("Enter receiver email: ")
 
-f=open("message.txt", "r")
+f = open("message.txt", "r")
 if f.mode == 'r':
 
     message = f.read()
