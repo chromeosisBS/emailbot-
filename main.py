@@ -1,5 +1,5 @@
 import emailbot
 
-emailbot.login()
+emailbot.login("emailbottesting@gmail.com")
 emailbot.get_reciever()
 emailbot.send()
