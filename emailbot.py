@@ -12,11 +12,9 @@ finally:
 
 port = 587  # For starttls
 smtp_server = "smtp.gmail.com" # choose smtp server default is google
-# get sender creds
+sender_email = ("emailbottesting@gmail.com") 
 def login():
-    sender_email = "emailbottesting@gmail.com" # put your email here
     password = getpass("type your password and press enter:")
-
 # get reciever emailß
 def get_reciever():
     receiver_email= input("Enter  receiver email: ")
@@ -32,7 +30,6 @@ with smtplib.SMTP(smtp_server, port) as server:
     server.ehlo()  # Can be omitted
 
 def send(): 
-    print (message)
     server.login(sender_email, password)
     server.sendmail(sender_email, receiver_email, message)
         
